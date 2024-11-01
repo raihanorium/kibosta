@@ -1,0 +1,8 @@
+allprojects {
+    group = 'com.raihanorium'
+    version = project.hasProperty('build.version') ? project.property('build.version') : '0.0.0-local'
+}
+
+tasks.register('build') {
+    dependsOn 'api:build'
+}
